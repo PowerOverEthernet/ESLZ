@@ -786,20 +786,20 @@
         },
         // Declaring deterministic names for platform resources that will be created
         "platformResourceNames": {
-            "logAnalyticsWorkspace": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-law')]",
-            "automationAccount": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-aauto')]",
-            "vpnGwName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-vpngw-', parameters('location'))]",
-            "erGwName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-ergw-', parameters('location'))]",
-            "ddosName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-ddos-', parameters('location'))]",
+            "logAnalyticsWorkspace": "[concat('law', '-logs-weu-001')]",
+            "automationAccount": "[concat('aauto', '-central-weu-001')]",
+            "vpnGwName": "[concat('vpngw', '-central-weu-001')]",
+            "erGwName": "[concat('ergw', '-central-weu-001')]",
+            "ddosName": "[concat('ddos', '-central-weu-001')]",
             "azFwPolicyName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-azfwpolicy-', parameters('location'))]",
             "azFwName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-fw-', parameters('location'))]",
             "azErGwIpName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-erpip-', parameters('location'))]",
-            "hubName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-hub-', parameters('location'))]",
-            "vwanName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-vwan-', parameters('location'))]",
+            "hubName": "[concat('hub', '-central-weu-001')]",
+            "vwanName": "[concat('vwan', '-central-weu-001')]",
             "azVpnGwIpName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-gwpip-', parameters('location'))]",
             "azFwIpName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-fwpip-', parameters('location'))]",
-            "identityVnet": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-vnet-', parameters('location'))]",
-            "lzVnet": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-vnet-', parameters('location'))]"
+            "identityVnet": "[concat('vnet', '-Identity-WEU-01')]",
+            "lzVnet": "[concat('vnet', '-central-weu-001')]"
         },
         // Declaring subscriptionId for AzOps
         "azOpsSubscriptionId": "[if(empty(parameters('subscriptionId')), parameters('singlePlatformSubscriptionId'), parameters('subscriptionId'))]",

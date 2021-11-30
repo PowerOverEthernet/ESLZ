@@ -607,7 +607,7 @@
     "variables": {
         // Declaring the prescriptive management group structure that will be used in the scope construction
         "mgmtGroups": {
-            "eslzRoot": "[concat('mg-dbec-001')]",
+            "eslzRoot": "[parameters('enterpriseScaleCompanyPrefix')]",
             "platform": "[concat('mg-platform-001')]",
             "management": "[concat('mg-management-001')]",
             "connectivity": "[concat('mg-connectivity-001')]",

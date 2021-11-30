@@ -790,18 +790,18 @@
         "platformResourceNames": {
             "logAnalyticsWorkspace": "[concat('law', '-logs-weu-001')]",
             "automationAccount": "[concat('aauto', '-central-weu-001')]",
-            "vpnGwName": "[concat('vpngw', '-central-weu-001')]",
-            "erGwName": "[concat('ergw', '-central-weu-001')]",
+            "vpnGwName": "[concat('vpngw', '-connectivity-weu-001')]",
+            "erGwName": "[concat('ergw', '-connectivity-weu-001')]",
             "ddosName": "[concat('ddos', '-central-weu-001')]",
             "azFwPolicyName": "[concat('azfwpolicy-central-weu-001')]",
             "azFwName": "[concat('fw-central-weu-001')]",
-            "azErGwIpName": "[concat('erpip-central-weu-001')]",
-            "hubName": "[concat('hub', '-central-weu-001')]",
-            "vwanName": "[concat('vwan', '-central-weu-001')]",
-            "azVpnGwIpName": "[concat('gwip-central-weu-001')]",
+            "azErGwIpName": "[concat('erpip-connectivity-weu-001')]",
+            "hubName": "[concat('hub', '-connectivity-weu-001')]",
+            "vwanName": "[concat('vwan', '-connectivity-weu-001')]",
+            "azVpnGwIpName": "[concat('gwip-connectivity-weu-001')]",
             "azFwIpName": "[concat('fwpip-central-weu-001')]",
             "identityVnet": "[concat('vnet', '-Identity-WEU-01')]",
-            "lzVnet": "[concat('vnet', '-central-weu-001')]"
+            "lzVnet": "[concat('vnet', '-lzcorp-weu-001')]"
         },
         // Declaring subscriptionId for AzOps
         "azOpsSubscriptionId": "[if(empty(parameters('subscriptionId')), parameters('singlePlatformSubscriptionId'), parameters('subscriptionId'))]",

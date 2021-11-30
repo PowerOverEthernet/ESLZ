@@ -1,6 +1,6 @@
 {
   "Name": "DBEC SecOps",
-  "Id": "48778efb-0697-4302-9692-f6ca8e39d4bf",
+  "Id": null,
   "IsCustom": true,
   "Description": "Security administrator role with a horizontal view across the entire Azure estate and the Azure Key Vault purge policy.",
   "Actions": [
@@ -21,7 +21,6 @@
   "DataActions": [],
   "NotDataActions": [],
   "AssignableScopes": [
-    "/subscriptions/*",
-    "/providers/Microsoft.Management/managementGroups/*"
+    "/providers/Microsoft.Management/managementGroups/DBEC"
   ]
 }

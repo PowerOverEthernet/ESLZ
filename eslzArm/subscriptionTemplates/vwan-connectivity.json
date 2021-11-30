@@ -78,11 +78,11 @@
         }
     },
     "variables": {
-        "vWanName": "[concat('vwan', '-central-weu-001')]",
+        "vWanName": "[concat('vwan', '-connectivity-weu-001')]",
         "vpngwname": "[concat(parameters('topLevelManagementGroupPrefix'), '-vpngw-', parameters('location'))]",
         "erGwName": "[concat(parameters('topLevelManagementGroupPrefix'), '-ergw-', parameters('location'))]",
         "rgName": "[concat('rg-vnethub-weu-001')]",
-        "vHubName": "[concat('hub', '-central-weu-001')]",
+        "vHubName": "[concat('hub', '-connectivity-weu-001')]",
         "azFwName": "[concat(parameters('topLevelManagementGroupPrefix'), '-fw-', parameters('location'))]",
         "vWanSku": "Standard",
         "vwanresourceid": "[concat('/subscriptions/', parameters('connectivitySubscriptionId'), '/resourceGroups/' ,variables('rgName'),'/providers/Microsoft.Network/virtualWans/', variables('vwanname'))]",

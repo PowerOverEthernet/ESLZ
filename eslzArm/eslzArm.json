@@ -1,9 +1,11 @@
 {
+
     "$schema": "https://schema.management.azure.com/schemas/2019-08-01/tenantDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
         "enterpriseScaleCompanyPrefix": {
             "type": "string",
+            "defaultValue": "dbec",
             "maxLength": 10,
             "metadata": {
                 "description": "Provide a prefix (max 10 characters, unique at tenant-scope) for the Management Group hierarchy and other resources created as part of Enterprise-scale."
@@ -11,7 +13,7 @@
         },
         "managementSubscriptionId": {
             "type": "string",
-            "defaultValue": "",
+            "defaultValue": "f13730ee-0e84-4d66-abc8-29ac6ceb0fce",
             "maxLength": 36,
             "metadata": {
                 "description": "Provide the subscription id of an existing, empty subscription you want to dedicate for management. If you don't want to bring a subscription, leave this parameter empty as is."
@@ -19,7 +21,7 @@
         },
         "connectivitySubscriptionId": {
             "type": "string",
-            "defaultValue": "",
+            "defaultValue": "71ef69c8-ed41-4abb-bff4-b27ae67164e5",
             "maxLength": 36,
             "metadata": {
                 "description": "Provide the subscription id of an existing, empty subscription you want to dedicate for networking."
@@ -27,7 +29,7 @@
         },
         "identitySubscriptionId": {
             "type": "string",
-            "defaultValue": "",
+            "defaultValue": "b76d0784-a711-40fa-b2c3-dc4788daffa0",
             "maxLength": 36,
             "metadata": {
                 "description": "Provide the subscription id of an existing, empty subscription you want to dedicate for identity."
@@ -39,7 +41,7 @@
                 "Yes",
                 "No"
             ],
-            "defaultValue": "No"
+            "defaultValue": "Yes"
         },
         "denyRdpForIdentity": {
             "type": "string",
@@ -47,7 +49,7 @@
                 "Yes",
                 "No"
             ],
-            "defaultValue": "No"
+            "defaultValue": "Yes"
         },
         "denyPipForIdentity": {
             "type": "string",
@@ -55,7 +57,7 @@
                 "Yes",
                 "No"
             ],
-            "defaultValue": "No"
+            "defaultValue": "Yes"
         },
         "enableVmBackupForIdentity": {
             "type": "string",
@@ -63,18 +65,18 @@
                 "Yes",
                 "No"
             ],
-            "defaultValue": "No"
+            "defaultValue": "Yes"
         },
         "onlineLzSubscriptionId": {
             "type": "array",
-            "defaultValue": [],
+            "defaultValue": ["4de44b7b-4980-4ce2-b18b-dc5bcfac76e7"],
             "metadata": {
                 "description": "Provide the subscription ids for existing, empty subscriptions you want to move in as your first online landing zones."
             }
         },
         "corpLzSubscriptionId": {
             "type": "array",
-            "defaultValue": [],
+            "defaultValue": ["5db3b888-36ff-4c77-b77a-c20cebda6e11"],
             "metadata": {
                 "description": "Provide the subscription ids for existing, empty subscriptions you want to move in as your first corp landing zones."
             }
@@ -88,7 +90,7 @@
         },
         "enableLogAnalytics": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -99,11 +101,11 @@
         },
         "retentionInDays": {
             "type": "string",
-            "defaultValue": ""
+            "defaultValue": "365"
         },
         "enableAsc": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -114,7 +116,7 @@
         },
         "enableAksPolicy": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -125,11 +127,11 @@
             "metadata": {
                 "description": "Email address for Azure Security Center contact details."
             },
-            "defaultValue": ""
+            "defaultValue": "poe@itacs.de"
         },
         "enableAscForServers": {
             "type": "string",
-            "defaultValue": "Disabled",
+            "defaultValue": "DeployIfNotExists",
             "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -141,7 +143,7 @@
                 "Disabled",
                 "DeployIfNotExists"
             ],
-            "defaultValue": "Disabled"            
+            "defaultValue": "DeployIfNotExists"            
         },
         "enableAscForStorage": {
             "type": "string",
@@ -149,7 +151,7 @@
                 "Disabled",
                 "DeployIfNotExists"
             ],
-            "defaultValue": "Disabled"            
+            "defaultValue": "DeployIfNotExists"            
         },
         "enableAscForSql": {
             "type": "string",
@@ -157,7 +159,7 @@
                 "Disabled",
                 "DeployIfNotExists"
             ],
-            "defaultValue": "Disabled"            
+            "defaultValue": "DeployIfNotExists"            
         },
         "enableAscForSqlOnVm": {
             "type": "string",
@@ -165,7 +167,7 @@
                 "Disabled",
                 "DeployIfNotExists"
             ],
-            "defaultValue": "Disabled"            
+            "defaultValue": "DeployIfNotExists"            
         },
         "enableAscForKeyVault": {
             "type": "string",
@@ -173,7 +175,7 @@
                 "Disabled",
                 "DeployIfNotExists"
             ],
-            "defaultValue": "Disabled"            
+            "defaultValue": "DeployIfNotExists"            
         },
         "enableAscForArm": {
             "type": "string",
@@ -181,7 +183,7 @@
                 "Disabled",
                 "DeployIfNotExists"
             ],
-            "defaultValue": "Disabled"            
+            "defaultValue": "DeployIfNotExists"            
         },
         "enableAscForDns": {
             "type": "string",
@@ -189,7 +191,7 @@
                 "Disabled",
                 "DeployIfNotExists"
             ],
-            "defaultValue": "Disabled"            
+            "defaultValue": "DeployIfNotExists"            
         },
         "enableAscForKubernetes": {
             "type": "string",
@@ -197,7 +199,7 @@
                 "Disabled",
                 "DeployIfNotExists"
             ],
-            "defaultValue": "Disabled"            
+            "defaultValue": "DeployIfNotExists"            
         },
         "enableAscForRegistries": {
             "type": "string",
@@ -205,7 +207,7 @@
                 "Disabled",
                 "DeployIfNotExists"
             ],
-            "defaultValue": "Disabled"            
+            "defaultValue": "DeployIfNotExists"            
         },
         "enableAscForOssDb": {
             "type": "string",
@@ -213,11 +215,11 @@
                 "Disabled",
                 "DeployIfNotExists"
             ],
-            "defaultValue": "Disabled"
+            "defaultValue": "DeployIfNotExists"
         },
         "denyAksPrivileged": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -225,7 +227,7 @@
         },
         "denyAksPrivilegedEscalation": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -233,7 +235,7 @@
         },
         "denyHttpIngressForAks": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -241,7 +243,7 @@
         },
         "enableVmMonitoring": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -252,7 +254,7 @@
         },
         "enableVmssMonitoring": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -263,7 +265,7 @@
         },
         "enableSecuritySolution": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -271,7 +273,7 @@
         },
         "enableEncryptionInTransit": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -279,7 +281,7 @@
         },
         "enableAgentHealth": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -287,7 +289,7 @@
         },
         "enableChangeTracking": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -343,7 +345,7 @@
         },
         "enableSqlEncryption": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -351,7 +353,7 @@
         },
         "enableVmBackup": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -359,7 +361,7 @@
         },
         "denyRdp": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -367,7 +369,7 @@
         },
         "denyPublicEndpoints": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -375,7 +377,7 @@
         },
         "enableStorageHttps": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -391,7 +393,7 @@
         },
         "denyIpForwarding": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -403,11 +405,11 @@
                 "Yes",
                 "No"
             ],
-            "defaultValue": "No"
+            "defaultValue": "Yes"
         },
         "addressPrefix": {
             "type": "string",
-            "defaultValue": ""
+            "defaultValue": "10.100.0.0/23"
         },
         "enableVpnGw": {
             "type": "string",
@@ -427,7 +429,7 @@
         },
         "location": {
             "type": "string",
-            "defaultValue": "[deployment().location]"
+            "defaultValue": "westeurope"
         },
         "enableHub": {
             "type": "string",
@@ -557,7 +559,7 @@
         },
         "subscriptionId": {
             "type": "string",
-            "defaultValue": "",
+            "defaultValue": "f13730ee-0e84-4d66-abc8-29ac6ceb0fce",
             "maxLength": 36
         },
         "singlePlatformSubscriptionId": {
@@ -575,11 +577,11 @@
         },
         "identityAddressPrefix": {
             "type": "string",
-            "defaultValue": ""
+            "defaultValue": "10.110.0.0/24"
         },
         "denyDatabricksPip": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -587,7 +589,7 @@
         },
         "denyDatabricksVnet": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -595,7 +597,7 @@
         },
         "denyDatabricksSku": {
             "type": "string",
-            "defaultValue": "No",
+            "defaultValue": "Yes",
             "allowedValues": [
                 "Yes",
                 "No"
@@ -605,14 +607,14 @@
     "variables": {
         // Declaring the prescriptive management group structure that will be used in the scope construction
         "mgmtGroups": {
-            "eslzRoot": "[parameters('enterpriseScaleCompanyPrefix')]",
-            "platform": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'platform')]",
-            "management": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'management')]",
-            "connectivity": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'connectivity')]",
-            "identity": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'identity')]",
-            "lzs": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'landingzones')]",
-            "corp": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'corp')]",
-            "online": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-', 'online')]"
+            "eslzRoot": "[concat('mg-dbec-001')]",
+            "platform": "[concat('mg-platform-001')]",
+            "management": "[concat('mg-management-001')]",
+            "connectivity": "[concat('mg-connectivity-001')]",
+            "identity": "[concat('mg-identity-001')]",
+            "lzs": "[concat('mg-landingzones-001')]",
+            "corp": "[concat('mg-corp-001')]",
+            "online": "[concat('mg-online-001')]"
         },
         // Declaring scopes that will be used for optional deployments, such as platform components (monitoring, networking, identity), policy assignments, subscription placement etc.
         "scopes": {
@@ -776,13 +778,13 @@
         },
         // Declaring deterministic names for Resource Groups that will be created for platform resources
         "platformRgNames": {
-            "mgmtRg": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-mgmt')]",
-            "azOpsRg": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-azops')]",
-            "connectivityRg": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-vnethub-', parameters('location'))]",
-            "ddosRg": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-ddos')]",
-            "privateDnsRg": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-privatedns')]",
-            "identityVnetRg": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-vnet-', parameters('location'))]",
-            "lzVnetRg": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-vnet-', parameters('location'))]"
+            "mgmtRg": "[concat('rg-mgmt-weu-001')]",
+            "azOpsRg": "[concat('rg-azops-weu-001')]",
+            "connectivityRg": "[concat('rg-connectivity-weu-001')]",
+            "ddosRg": "[concat('rg-ddos-weu-001')]",
+            "privateDnsRg": "[concat('rg-privatedns-weu-001')]",
+            "identityVnetRg": "[concat('rg-identity-weu-001')]",
+            "lzVnetRg": "[concat('rg-lzcorp_vnet-weu-001')]"
         },
         // Declaring deterministic names for platform resources that will be created
         "platformResourceNames": {
@@ -791,13 +793,13 @@
             "vpnGwName": "[concat('vpngw', '-central-weu-001')]",
             "erGwName": "[concat('ergw', '-central-weu-001')]",
             "ddosName": "[concat('ddos', '-central-weu-001')]",
-            "azFwPolicyName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-azfwpolicy-', parameters('location'))]",
-            "azFwName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-fw-', parameters('location'))]",
-            "azErGwIpName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-erpip-', parameters('location'))]",
+            "azFwPolicyName": "[concat('azfwpolicy-central-weu-001')]",
+            "azFwName": "[concat('fw-central-weu-001')]",
+            "azErGwIpName": "[concat('erpip-central-weu-001')]",
             "hubName": "[concat('hub', '-central-weu-001')]",
             "vwanName": "[concat('vwan', '-central-weu-001')]",
-            "azVpnGwIpName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-gwpip-', parameters('location'))]",
-            "azFwIpName": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-fwpip-', parameters('location'))]",
+            "azVpnGwIpName": "[concat('gwip-central-weu-001')]",
+            "azFwIpName": "[concat('fwpip-central-weu-001')]",
             "identityVnet": "[concat('vnet', '-Identity-WEU-01')]",
             "lzVnet": "[concat('vnet', '-central-weu-001')]"
         },

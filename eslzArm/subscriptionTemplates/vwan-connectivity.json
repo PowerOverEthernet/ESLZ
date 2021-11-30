@@ -81,7 +81,7 @@
         "vWanName": "[concat(parameters('topLevelManagementGroupPrefix'), '-vwan-', parameters('location'))]",
         "vpngwname": "[concat(parameters('topLevelManagementGroupPrefix'), '-vpngw-', parameters('location'))]",
         "erGwName": "[concat(parameters('topLevelManagementGroupPrefix'), '-ergw-', parameters('location'))]",
-        "rgName": "[concat(parameters('topLevelManagementGroupPrefix'), '-vnethub-', parameters('location'))]",
+        "rgName": "[concat('rg-vnethub-weu-001')]",
         "vHubName": "[concat(parameters('topLevelManagementGroupPrefix'), '-hub-', parameters('location'))]",
         "azFwName": "[concat(parameters('topLevelManagementGroupPrefix'), '-fw-', parameters('location'))]",
         "vWanSku": "Standard",

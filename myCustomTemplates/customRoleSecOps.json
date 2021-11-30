@@ -1,0 +1,27 @@
+{
+  "Name": "DBEC SecOps",
+  "Id": "48778efb-0697-4302-9692-f6ca8e39d4bf",
+  "IsCustom": true,
+  "Description": "Security administrator role with a horizontal view across the entire Azure estate and the Azure Key Vault purge policy.",
+  "Actions": [
+    "*/read",
+    "*/register/action",
+    "Microsoft.KeyVault/locations/deletedVaults/purge/action",
+    "Microsoft.PolicyInsights/*",
+    "Microsoft.Authorization/policyAssignments/*",
+    "Microsoft.Authorization/policyDefinitions/*",
+    "Microsoft.Authorization/policyExemptions/*",
+    "Microsoft.Authorization/policySetDefinitions/*",
+    "Microsoft.Insights/alertRules/*",
+    "Microsoft.Resources/deployments/*",
+    "Microsoft.Security/*",
+    "Microsoft.Support/*"
+  ],
+  "NotActions": [],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    "/subscriptions/*",
+    "/providers/Microsoft.Management/managementGroups/*"
+  ]
+}

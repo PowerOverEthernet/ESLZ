@@ -780,7 +780,7 @@
         "platformRgNames": {
             "mgmtRg": "[concat('rg-mgmt-weu-001')]",
             "azOpsRg": "[concat('rg-azops-weu-001')]",
-            "connectivityRg": "[concat('rg-connectivity-weu-001')]",
+            "connectivityRg": "[concat('rg-vnethub-weu-001')]",
             "ddosRg": "[concat('rg-ddos-weu-001')]",
             "privateDnsRg": "[concat('rg-privatedns-weu-001')]",
             "identityVnetRg": "[concat('rg-identity-weu-001')]",

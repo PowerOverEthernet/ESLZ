@@ -83,7 +83,7 @@
         "erGwName": "[concat('ergw', '-connectivity-weu-001')]",
         "rgName": "[concat('rg-vnethub-weu-001')]",
         "vHubName": "[concat('hub', '-connectivity-weu-001')]",
-        "azFwName": "[concat('fw-central-weu-001')]",
+        "azFwName": "[concat(parameters('topLevelManagementGroupPrefix'), '-fw-', parameters('location'))]",
         "vWanSku": "Standard",
         "vwanresourceid": "[concat('/subscriptions/', parameters('connectivitySubscriptionId'), '/resourceGroups/' ,variables('rgName'),'/providers/Microsoft.Network/virtualWans/', variables('vwanname'))]",
         "vwanhub": "[concat('/subscriptions/', parameters('connectivitySubscriptionId'), '/resourceGroups/', variables('rgName'),'/providers/Microsoft.Network/virtualHubs/', variables('vhubname'))]",

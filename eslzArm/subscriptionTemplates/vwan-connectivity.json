@@ -96,7 +96,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2019-10-01",
             "location": "[parameters('location')]",
-            "name": "[concat('EntScale', '-connectivitySub')]",
+            "name": "[concat('EntScale', '-connectivitySub',guid(parameters('topLevelManagementGroupPrefix')))]",
             "subscriptionId": "[parameters('connectivitySubscriptionId')]",
             "properties": {
                 "mode": "Incremental",

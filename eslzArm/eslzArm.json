@@ -409,7 +409,7 @@
         },
         "addressPrefix": {
             "type": "string",
-            "defaultValue": "10.100.0.0/23"
+            "defaultValue": "10.100.0.0/24"
         },
         "enableVpnGw": {
             "type": "string",
@@ -789,7 +789,7 @@
         // Declaring deterministic names for platform resources that will be created
         "platformResourceNames": {
             "logAnalyticsWorkspace": "[concat('law', '-logs-weu-001')]",
-            "automationAccount": "[concat('aauto', '-central-weu-001')]",
+            "automationAccount": "[concat('aauto', '-management-weu-001')]",
             "vpnGwName": "[concat('vpngw', '-connectivity-weu-001')]",
             "erGwName": "[concat('ergw', '-connectivity-weu-001')]",
             "ddosName": "[concat('ddos', '-central-weu-001')]",

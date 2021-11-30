@@ -2655,7 +2655,7 @@
                         "value": "[variables('platformRgNames').identityVnetRg]"
                     },
                     "vNetName": {
-                        "value": "[concat(parameters('identitySubscriptionId'), variables('platformResourceNames').identityVnet)]"
+                        "value": "[variables('platformResourceNames').identityVnet]"
                     },
                     "vNetLocation": {
                         "value": "[parameters('location')]"

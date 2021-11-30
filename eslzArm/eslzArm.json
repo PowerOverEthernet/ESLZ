@@ -800,7 +800,7 @@
             "vwanName": "[concat('vwan', '-connectivity-weu-001')]",
             "azVpnGwIpName": "[concat('gwip-connectivity-weu-001')]",
             "azFwIpName": "[concat('fwpip-central-weu-001')]",
-            "identityVnet": "[concat('vnet', '-Identity-WEU-01')]",
+            "identityVnet": "[concat('vnet', '-identity-weu-01')]",
             "lzVnet": "[concat('vnet', '-lzcorp-weu-001')]"
         },
         // Declaring subscriptionId for AzOps
@@ -2609,7 +2609,7 @@
                         "value": "[variables('platformRgNames').identityVnetRg]"
                     },
                     "vNetName": {
-                        "value": "[concat(parameters('identitySubscriptionId'), variables('platformResourceNames').identityVnet)]"
+                        "value": "[variables('platformResourceNames').identityVnet]"
                     },
                     "vNetLocation": {
                         "value": "[parameters('location')]"

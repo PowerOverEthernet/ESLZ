@@ -1,0 +1,18 @@
+{
+  "Name": "DBEC NetOps",
+  "Id": null,
+  "IsCustom": true,
+  "Description": "Platform-wide global connectivity management: Virtual networks, UDRs, NSGs, NVAs, VPN, Azure ExpressRoute, and others.",
+  "Actions": [
+    "*/read",
+    "Microsoft.Network/*",
+    "Microsoft.Resources/deployments/*",
+    "Microsoft.Support/*"
+  ],
+  "NotActions": [],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    "/providers/Microsoft.Management/managementGroups/DBEC"
+  ]
+}
